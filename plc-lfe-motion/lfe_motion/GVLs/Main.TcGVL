@@ -290,14 +290,14 @@ VAR_GLOBAL
                               .bLimitBackwardEnable := TIIB[SP1L0-EL7041-E2-MOTORS]^STM Status^Status^Digital input 1'}
     M57: ST_MotionStage := (sName := 'RTDSX0:MMS:03');
     *)
-	
-	{attribute 'pytmc' := 'pv: EM3L0:IPM:MMS:X'}
-	{attribute 'TcLinkTo' := '.nRawEncoderULINT     := TIIB[EM3L0-EL5042-E2]^FB Inputs Channel 1^Position'}
-	M55: ST_MotionStage := (sName := 'IPM:MMS:X');
-	{attribute 'pytmc' := 'pv: EM3L0:IPM:MMS:Y'}
-	{attribute 'TcLinkTo' := '.bBrakeRelease        := TIIB[EM3L0-EL2004-E4]^Channel 1^Output;
+
+    {attribute 'pytmc' := 'pv: EM3L0:IPM:MMS:X'}
+    {attribute 'TcLinkTo' := '.nRawEncoderULINT     := TIIB[EM3L0-EL5042-E2]^FB Inputs Channel 1^Position'}
+    M55: ST_MotionStage := (sName := 'IPM:MMS:X');
+    {attribute 'pytmc' := 'pv: EM3L0:IPM:MMS:Y'}
+    {attribute 'TcLinkTo' := '.bBrakeRelease        := TIIB[EM3L0-EL2004-E4]^Channel 1^Output;
                               .nRawEncoderULINT     := TIIB[EM3L0-EL5042-E2]^FB Inputs Channel 2^Position'}
-	M56: ST_MotionStage := (sName := 'IPM:MMS:Y');
+    M56: ST_MotionStage := (sName := 'IPM:MMS:Y');
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

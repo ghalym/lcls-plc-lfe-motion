@@ -3,16 +3,16 @@
   <POU Name="PRG_EM3L0_IPM" Id="{4adf54d6-2300-0c37-01b3-efe22b2f9fec}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_EM3L0_IPM
 VAR
-	{attribute 'pytmc' := '
+    {attribute 'pytmc' := '
         pv: EM3L0:IPM
         io: io
     '}
-	fbEM3L0: FB_IPM;
+    fbEM3L0: FB_IPM;
 
     fbStateSetup: FB_StateSetupHelper;
     stDefault: ST_PositionState :=(
         fVelocity := 0.5,
-		bMoveOK := TRUE,
+        bMoveOK := TRUE,
         bValid := TRUE
     );
 END_VAR
@@ -27,12 +27,12 @@ fbStateSetup(StPositionState:=fbEM3L0.stTarget3, fposition:=-30, sPmpsState := '
 fbStateSetup(StPositionState:=fbEM3L0.stTarget4, fposition:=-40, sPmpsState := 'EM3L0:IPM-TARGET4');
 
 fbEM3L0(
-	fbArbiter := GVL.fbArbiter,
-	fbFFHWO := GVL.fbFastFaultOutput1,	
-	stXStage := MAIN.M55,
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    stXStage := MAIN.M55,
     stYStage := MAIN.M56,
-	sDeviceName := 'EM3L0:IPM',
-	sTransitionKey := 'EM3L0:IPM-TRANSITION',
+    sDeviceName := 'EM3L0:IPM',
+    sTransitionKey := 'EM3L0:IPM-TRANSITION',
     bEnableMotion := TRUE,
     bEnableBeamParams := TRUE,
     bEnablePositionLimits := TRUE

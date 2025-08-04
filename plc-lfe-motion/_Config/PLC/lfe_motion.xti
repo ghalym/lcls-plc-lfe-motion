@@ -1318,7 +1318,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{5364CE42-9782-432E-9F8A-838503C1EFE8}" Name="lfe_motion" PrjFilePath="..\..\lfe_motion\lfe_motion.plcproj" TmcFilePath="..\..\lfe_motion\lfe_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{EE5C3A52-2DD0-ED48-9D3C-CA6CCA05A66C}" TmcPath="lfe_motion\lfe_motion.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{ABB9B77D-F7A3-9B18-F92E-BBEC2F92980F}" TmcPath="lfe_motion\lfe_motion.tmc">
 			<Name>lfe_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -2288,6 +2288,18 @@ External Setpoint Generation:
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 				</Var>
 				<Var>
+					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL.rCurTrans</Name>
+					<Type GUID="{1B2BB24D-8D93-CDEB-BE85-D3B8E8906AF3}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Var>
+				<Var>
 					<Name>Main.M1.Axis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
@@ -2790,18 +2802,6 @@ External Setpoint Generation:
 					<Name>Main.M56.bBrakeRelease</Name>
 					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.fbFastFaultOutput2.q_xFastFaultOut</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL.rCurTrans</Name>
-					<Type GUID="{1B2BB24D-8D93-CDEB-BE85-D3B8E8906AF3}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
 				</Var>
 				<Var>
 					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
@@ -7166,6 +7166,10 @@ External Setpoint Generation:
 					<Type>BIT</Type>
 				</Var>
 				<Var>
+					<Name>GVL.rReqTrans</Name>
+					<Type GUID="{1B2BB24D-8D93-CDEB-BE85-D3B8E8906AF3}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
+				</Var>
+				<Var>
 					<Name>Main.M1.Axis.NcToPlc</Name>
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
@@ -9630,10 +9634,6 @@ External Setpoint Generation:
 					<Type>DINT</Type>
 				</Var>
 				<Var>
-					<Name>GVL.rReqTrans</Name>
-					<Type GUID="{1B2BB24D-8D93-CDEB-BE85-D3B8E8906AF3}">ARRAY [1..16] OF ST_PMPS_Attenuator_IO</Type>
-				</Var>
-				<Var>
 					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
 					<Comment><![CDATA[IO]]></Comment>
 					<Type>BOOL</Type>
@@ -10133,6 +10133,13 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL7041">
 				<Link VarA="PlcTask Inputs^Main.M28.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X2 ECJ (CU1128)^X2 EM3L0-IPM (EK1100)^EM3L0-EL2004-E4">
+				<Link VarA="PlcTask Outputs^Main.M56.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X2 ECJ (CU1128)^X2 EM3L0-IPM (EK1100)^EM3L0-EL5042-E2">
+				<Link VarA="PlcTask Inputs^Main.M55.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M56.nRawEncoderULINT" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10">
 				<Link VarA="PlcTask Inputs^PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>

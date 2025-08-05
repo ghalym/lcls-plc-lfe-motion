@@ -20,11 +20,11 @@ END_VAR
     <Implementation>
       <ST><![CDATA[
 fbStateSetup(StPositionState:=stDefault, bSetDefault:=TRUE);
-fbStateSetup(StPositionState:=fbEM3L0.stOut, fposition:=-1, sPmpsState := 'EM3L0:IPM-OUT');
-fbStateSetup(StPositionState:=fbEM3L0.stTarget1, fposition:=-10, sPmpsState := 'EM3L0:IPM-TARGET1');
-fbStateSetup(StPositionState:=fbEM3L0.stTarget2, fposition:=-20, sPmpsState := 'EM3L0:IPM-TARGET2');
-fbStateSetup(StPositionState:=fbEM3L0.stTarget3, fposition:=-30, sPmpsState := 'EM3L0:IPM-TARGET3');
-fbStateSetup(StPositionState:=fbEM3L0.stTarget4, fposition:=-40, sPmpsState := 'EM3L0:IPM-TARGET4');
+fbStateSetup(StPositionState:=fbEM3L0.stOut, fposition:=0, sPmpsState := 'EM3L0:IPM-OUT');
+fbStateSetup(StPositionState:=fbEM3L0.stTarget1, fposition:=-18, sPmpsState := 'EM3L0:IPM-TARGET1');
+fbStateSetup(StPositionState:=fbEM3L0.stTarget2, fposition:=-38.6, sPmpsState := 'EM3L0:IPM-TARGET2');
+fbStateSetup(StPositionState:=fbEM3L0.stTarget3, fposition:=-59.15, sPmpsState := 'EM3L0:IPM-TARGET3');
+fbStateSetup(StPositionState:=fbEM3L0.stTarget4, fposition:=-79.85, sPmpsState := 'EM3L0:IPM-TARGET4');
 
 fbEM3L0(
     fbArbiter := GVL.fbArbiter,

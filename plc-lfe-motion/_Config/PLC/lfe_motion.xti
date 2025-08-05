@@ -795,12 +795,11 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
+			<Name GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
 			<Comment><![CDATA[ This data type is corresponding to the
-   KL-6xxx data structure used in the
+   EL-6xxx data structure used in the
    TwinCAT SystemManager
-   (KL-6xxx version using 5 data bytes / 
-    non-alternative (standard) output ) 
+   (EL-6xxx version using 22 data bytes) 
 ]]></Comment>
 			<BitSize>192</BitSize>
 			<SubItem>
@@ -1291,12 +1290,11 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
+			<Name GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
 			<Comment><![CDATA[ This data type is corresponding to the
-   KL-6xxx data structure used in the
+   EL-6xxx data structure used in the
    TwinCAT SystemManager
-   (KL-6xxx version using 5 data bytes / 
-    non-alternative (standard) output ) 
+   (EL-6xxx version using 22 data bytes) 
 ]]></Comment>
 			<BitSize>192</BitSize>
 			<SubItem>
@@ -1318,7 +1316,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{5364CE42-9782-432E-9F8A-838503C1EFE8}" Name="lfe_motion" PrjFilePath="..\..\lfe_motion\lfe_motion.plcproj" TmcFilePath="..\..\lfe_motion\lfe_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{ABB9B77D-F7A3-9B18-F92E-BBEC2F92980F}" TmcPath="lfe_motion\lfe_motion.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{82A537EC-B9D2-B40B-2783-E6454FEB8AC5}" TmcPath="lfe_motion\lfe_motion.tmc">
 			<Name>lfe_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -1985,7 +1983,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM1L0_XTES.stEL6Out</Name>
-					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -2080,7 +2078,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM2L0_XTES.stEL6Out</Name>
-					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -2175,7 +2173,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM4L0_XTES.stEL6Out</Name>
-					<Type GUID="{E979BFBF-B5B9-4F4F-BDAF-999835F39B9D}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -2286,6 +2284,38 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_3_PMPS_POST.fbArbiterIO.q_stRequestedBP</Name>
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL.fbFastFaultOutput1.q_xFastFaultOut</Name>
@@ -2803,38 +2833,6 @@ External Setpoint Generation:
 					<Comment><![CDATA[ NC Brake Output: TRUE to release brake]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.q_xInsert_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.q_xRetract_DO</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
@@ -2853,10 +2851,6 @@ External Setpoint Generation:
 					<Type>UINT</Type>
 				</Var>
 				<Var>
-					<Name>PRG_IM2L0_XTES.bDefectiveLimitSwitch</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
 					<Comment><![CDATA[nM1Current: INT;]]></Comment>
 					<Type>UINT</Type>
@@ -2864,6 +2858,10 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM2CoilBRaw</Name>
 					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>PRG_IM2L0_XTES.bDefectiveLimitSwitch</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>PRG_AT2L0_SOLID.nM3CoilARaw</Name>
@@ -5772,7 +5770,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM1L0_XTES.stEL6In</Name>
-					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM1L1_PPM.fbIM1L1.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -6135,7 +6133,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM2L0_XTES.stEL6In</Name>
-					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM3L0_PPM.fbIM3L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -6498,7 +6496,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>PRG_IM4L0_XTES.stEL6In</Name>
-					<Type GUID="{63C476CA-3C4F-477E-9C2E-34379B1D490C}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>PRG_PF1L0_WFS.fbPF1L0.fbYStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -7164,6 +7162,42 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_3_PMPS_POST.fbArbiterIO.xTxPDO_state</Name>
 					<Type>BIT</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
+					<Comment><![CDATA[IO]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>GVL.rReqTrans</Name>
@@ -9633,42 +9667,6 @@ External Setpoint Generation:
 					<Comment><![CDATA[ Raw encoder IO for INT (EL5072 LVDT)]]></Comment>
 					<Type>DINT</Type>
 				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.i_xInsertedLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_01.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.i_xInsertedLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_02.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.i_xInsertedLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_03.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.i_xInsertedLS</Name>
-					<Comment><![CDATA[IO]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>RTDSL0.RTDSL0_MPA_04.i_xRetractedLS</Name>
-					<Type>BOOL</Type>
-				</Var>
 			</Vars>
 			<UnrestoredVarLinks ImportTime="2020-02-25T19:22:43">
 				<OwnerA Name="OutputSrc" Prefix="TIPC^lfe_motion^lfe_motion Instance" Type="2">
@@ -9688,6 +9686,280 @@ External Setpoint Generation:
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2025-08-04T13:27:25">
+				<OwnerA Name="InputDst" Prefix="TIPC^lfe_motion^lfe_motion Instance" Type="1">
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL1088">
+						<Link VarA="PRG_IM1L0_XTES.fbIM1L0.bFocusEndFwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Input" IdB="-615" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.fbIM1L0.bZoomEndBwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" IdB="-614" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" IdB="-613" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL6002">
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[10]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" IdB="-713" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[11]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" IdB="-714" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[12]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" IdB="-715" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[13]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" IdB="-716" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[14]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" IdB="-717" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[15]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" IdB="-718" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[16]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" IdB="-719" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[17]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" IdB="-720" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[18]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" IdB="-721" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[19]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" IdB="-722" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[1]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" IdB="-704" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[20]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" IdB="-723" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[21]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" IdB="-724" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[2]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" IdB="-705" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[3]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" IdB="-706" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[4]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" IdB="-707" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[5]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" IdB="-708" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[6]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" IdB="-709" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[7]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" IdB="-710" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[8]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" IdB="-711" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^D[9]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" IdB="-712" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6In^Status" TypeA="WORD" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000004}" VarB="COM TxPDO-Map Inputs Channel 1^Status" IdB="-702" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088">
+						<Link VarA="PRG_IM2L0_XTES.fbIM2L0.bFocusEndFwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Input" IdB="-845" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.fbIM2L0.bZoomEndBwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" IdB="-844" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.fbIM2L0.bZoomEndFwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" IdB="-843" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002">
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[10]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" IdB="-863" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[11]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" IdB="-864" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[12]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" IdB="-865" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[13]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" IdB="-866" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[14]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" IdB="-867" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[15]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" IdB="-868" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[16]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" IdB="-869" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[17]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" IdB="-870" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[18]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" IdB="-871" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[19]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" IdB="-872" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[1]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" IdB="-854" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[20]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" IdB="-873" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[21]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" IdB="-874" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[2]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" IdB="-855" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[3]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" IdB="-856" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[4]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" IdB="-857" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[5]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" IdB="-858" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[6]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" IdB="-859" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[7]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" IdB="-860" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[8]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" IdB="-861" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^D[9]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" IdB="-862" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6In^Status" TypeA="WORD" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000004}" VarB="COM TxPDO-Map Inputs Channel 1^Status" IdB="-852" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 PF1L0-WFS (EK1100)^PF1L0-EL3314">
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Overrange" IdB="53643" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Underrange" IdB="53642" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 1^Value" IdB="-983" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Error" IdB="53653" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Overrange" IdB="53650" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Underrange" IdB="53649" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_PF1L0_WFS.fbPF1L0.fbThermoCouple2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 2^Value" IdB="-985" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E10">
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="54603" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="54602" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1418" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="54613" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="54610" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="54609" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_TOP_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1420" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E11">
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="54619" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="54618" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1424" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="54629" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="54626" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="54625" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_North_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1426" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E8">
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="54571" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="54570" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1406" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="54581" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="54578" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="54577" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_Bottom_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1408" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 SL1L0-Power (EK1100)^SL1L0-EL3202-E9">
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="54587" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="54586" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1412" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="54597" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="54594" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="54593" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL1L0_POWER.fbSL1L0.RTD_South_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1414" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X1 IM3L0-PPM (EK1100)^IM3L0-EL3314">
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbTempSensor.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Overrange" IdB="54675" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbTempSensor.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Underrange" IdB="54674" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbPowerMeter.fbTempSensor.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 1^Value" IdB="-1458" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbYagTempSensor.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Error" IdB="54685" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbYagTempSensor.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Overrange" IdB="54682" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbYagTempSensor.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Underrange" IdB="54681" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM3L0_PPM.fbIM3L0.fbYagTempSensor.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 2^Value" IdB="-1460" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E1 (EK1122)^X2 IM1L1-PPM (EK1100)^IM1L1-EL3314">
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbTempSensor.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Overrange" IdB="54779" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbTempSensor.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 1^Status^Underrange" IdB="54778" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbPowerMeter.fbTempSensor.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 1^Value" IdB="-1513" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbYagTempSensor.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Error" IdB="54789" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbYagTempSensor.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Overrange" IdB="54786" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbYagTempSensor.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="TC Inputs Channel 2^Status^Underrange" IdB="54785" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L1_PPM.fbIM1L1.fbYagTempSensor.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="TC Inputs Channel 2^Value" IdB="-1515" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL1088">
+						<Link VarA="PRG_IM4L0_XTES.fbIM4L0.bFocusEndFwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Input" IdB="-1592" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.fbIM4L0.bZoomEndBwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Input" IdB="-1591" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.fbIM4L0.bZoomEndFwd" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" IdB="-1590" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002">
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[10]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" IdB="-1610" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[11]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" IdB="-1611" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[12]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 12" IdB="-1612" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[13]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 13" IdB="-1613" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[14]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 14" IdB="-1614" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[15]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 15" IdB="-1615" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[16]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 16" IdB="-1616" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[17]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 17" IdB="-1617" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[18]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 18" IdB="-1618" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[19]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 19" IdB="-1619" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[1]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 1" IdB="-1601" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[20]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 20" IdB="-1620" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[21]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 21" IdB="-1621" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[2]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 2" IdB="-1602" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[3]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 3" IdB="-1603" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[4]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 4" IdB="-1604" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[5]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 5" IdB="-1605" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[6]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 6" IdB="-1606" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[7]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 7" IdB="-1607" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[8]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" IdB="-1608" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^D[9]" TypeA="BYTE" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" IdB="-1609" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6In^Status" TypeA="WORD" InOutA="0" ParentTypeA="EL6inData22B" GuidA="{18071995-0000-0000-0000-000000000004}" VarB="COM TxPDO-Map Inputs Channel 1^Status" IdB="-1599" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E10">
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1821" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Error" IdB="55240" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="55237" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="55236" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1821" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="55247" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="55244" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="55243" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_TOP_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1823" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E11">
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_North_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="55252" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="55263" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="55260" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="55259" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_North_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1829" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E8">
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="55205" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="55204" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1809" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="55215" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="55212" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="55211" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_Bottom_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1811" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 SL2L0-Power (EK1100)^SL2L0-EL3202-E9">
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Overrange" IdB="55221" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 1^Status^Underrange" IdB="55220" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_1.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 1^Value" IdB="-1815" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bError" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Error" IdB="55231" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bOverrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Overrange" IdB="55228" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.bUnderrange" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="RTD Inputs Channel 2^Status^Underrange" IdB="55227" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_SL2L0_POWER.fbSL2L0.RTD_South_2.iRaw" TypeA="INT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="RTD Inputs Channel 2^Value" IdB="-1817" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="OutputSrc" Prefix="TIPC^lfe_motion^lfe_motion Instance" Type="2">
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL2004">
+						<Link VarA="PRG_IM1L0_XTES.fbIM1L0.fbOpal.bOpalPower" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Output" IdB="-595" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 1 (EK1122)^X2 IM1L0-XTES (EK1100)^IM1L0-EL6002">
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[0]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" IdB="-749" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[10]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" IdB="-759" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[11]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" IdB="-760" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[12]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" IdB="-761" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[13]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" IdB="-762" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[14]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" IdB="-763" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[15]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" IdB="-764" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[16]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" IdB="-765" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[17]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" IdB="-766" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[18]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" IdB="-767" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[19]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" IdB="-768" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[1]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" IdB="-750" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[20]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" IdB="-769" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[21]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" IdB="-770" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[2]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" IdB="-751" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[3]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" IdB="-752" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[4]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" IdB="-753" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[5]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" IdB="-754" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[6]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" IdB="-755" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[7]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" IdB="-756" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[8]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" IdB="-757" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM1L0_XTES.stEL6Out^D[9]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" IdB="-758" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL2004">
+						<Link VarA="PRG_IM2L0_XTES.fbIM2L0.fbOpal.bOpalPower" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Output" IdB="-811" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^IM2L0 AT2L0 SL1L0 JUNCTION (CU1124)^X1 IM2L0-XTES (EK1100)^IM2L0-EL6002">
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[0]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" IdB="-899" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[10]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" IdB="-909" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[11]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" IdB="-910" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[12]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" IdB="-911" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[13]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" IdB="-912" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[14]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" IdB="-913" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[15]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" IdB="-914" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[16]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" IdB="-915" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[17]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" IdB="-916" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[18]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" IdB="-917" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[19]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" IdB="-918" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[1]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" IdB="-900" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[20]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" IdB="-919" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[21]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" IdB="-920" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[2]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" IdB="-901" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[3]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" IdB="-902" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[4]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" IdB="-903" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[5]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" IdB="-904" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[6]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" IdB="-905" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[7]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" IdB="-906" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[8]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" IdB="-907" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM2L0_XTES.stEL6Out^D[9]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" IdB="-908" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL2004">
+						<Link VarA="PRG_IM4L0_XTES.fbIM4L0.fbLED.bLEDPower" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 3^Output" IdB="-1561" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.fbIM4L0.fbOpal.bOpalPower" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 2^Output" IdB="-1560" AutoLink="true" Size="1" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X1 IM4L0-XTES (EK1100)^IM4L0-EL6002">
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[0]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" IdB="-1646" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[10]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" IdB="-1656" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[11]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" IdB="-1657" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[12]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" IdB="-1658" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[13]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 13" IdB="-1659" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[14]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 14" IdB="-1660" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[15]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 15" IdB="-1661" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[16]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 16" IdB="-1662" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[17]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 17" IdB="-1663" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[18]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 18" IdB="-1664" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[19]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 19" IdB="-1665" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[1]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 1" IdB="-1647" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[20]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 20" IdB="-1666" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[21]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 21" IdB="-1667" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[2]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 2" IdB="-1648" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[3]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 3" IdB="-1649" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[4]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 4" IdB="-1650" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[5]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 5" IdB="-1651" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[6]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 6" IdB="-1652" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[7]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" IdB="-1653" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[8]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" IdB="-1654" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+						<Link VarA="PRG_IM4L0_XTES.stEL6Out^D[9]" TypeA="BYTE" InOutA="1" ParentTypeA="EL6outData22B" GuidA="{18071995-0000-0000-0000-000000000001}" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" IdB="-1655" AutoLink="true" RestoreInfo="PendingAutoLink"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<Contexts>
 				<Context>
 					<Id>0</Id>
@@ -9696,7 +9968,7 @@ External Setpoint Generation:
 						<OTCID>#x02010030</OTCID>
 					</ManualConfig>
 					<Priority>20</Priority>
-					<CycleTime>5000000</CycleTime>
+					<CycleTime>20000000</CycleTime>
 				</Context>
 			</Contexts>
 			<TaskPouOids>

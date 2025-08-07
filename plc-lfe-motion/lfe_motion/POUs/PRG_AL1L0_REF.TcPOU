@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="PRG_AL1L0_REF" Id="{0d63d84a-166a-0041-1034-84e836973389}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_AL1L0_REF
+VAR
+    {attribute 'pytmc' := 'pv: AL1L0:REF'}
+    {attribute 'TcLinkTo' := '.fbLaser.iLaserINT := TIIB[AL1L0-EL4004-E4]^AO Outputs Channel 1^Analog output;
+                              .fbLaser.iShutdownINT := TIIB[AL1L0-EL4004-E4]^AO Outputs Channel 2^Analog output'}
+    fbAL1L0: FB_REF;
+
+    fbStateSetup: FB_StateSetupHelper;
+    stDefault: ST_PositionState := (
+        fVelocity := 1,
+        bMoveOk := TRUE,
+        bValid := TRUE
+    );
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
+fbStateSetup(stPositionState:=fbAL1L0.stOut, fPosition:=, sPmpsState:='AL1L0:REF-OUT');
+fbStateSetup(stPositionState:=fbAL1L0.stIn, fPosition:=, fDelta:=2, sPmpsState:='AL1L0:REF-IN');
+
+fbAL1L0(
+    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbArbiter := GVL.fbArbiter,
+    stYStage := MAIN.M58,
+    sDeviceName := 'AL1K3:REF',
+    sTransitionKey := 'AL1K3:REF-TRANSITION',
+    bEnableMotion := TRUE,
+    bEnableBeamParams := TRUE,
+    bEnablePositionLimits := TRUE,
+);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

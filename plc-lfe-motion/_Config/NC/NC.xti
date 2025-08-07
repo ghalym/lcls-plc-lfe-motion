@@ -28,6 +28,8 @@
 		<AxisFolder Name="SL2L0-POWER"/>
 		<AxisFolder Name="SP1L0-KMONO"/>
 		<AxisFolder Name="EM3L0-IPM"/>
+		<AxisFolder Name="IM5L0-PPM"/>
+		<AxisFolder Name="AL1L0-REF"/>
 		<Axis File="Axis 1.xti" Id="1"/>
 		<Axis File="Axis 2.xti" Id="2"/>
 		<Axis File="Axis 3.xti" Id="3"/>
@@ -84,5 +86,7 @@
 		<Axis File="DIODE VERT Y.xti" Id="54"/>
 		<Axis File="EM3L0-X-M55.xti" Id="55"/>
 		<Axis File="EM3L0-Y-M56.xti" Id="56"/>
+		<Axis File="Axis 57 IM5L0-PPM-MMS.xti" Id="57"/>
+		<Axis File="AL1L0-REF-MMS-M58.xti" Id="58"/>
 	</NC>
 </TcSmItem>

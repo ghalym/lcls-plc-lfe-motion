@@ -57,6 +57,9 @@
 			<SyncUnit Name="SL2L0" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="SP1K0" NoDeleteIfUnused="true"/>
 			<SyncUnit Name="EM3L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="SL3L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="IM5L0" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="AL1L0" NoDeleteIfUnused="true"/>
 		</EtherCAT>
 	</Device>
 </TcSmItem>

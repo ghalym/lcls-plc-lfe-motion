@@ -307,7 +307,7 @@ VAR_GLOBAL
     M57: ST_MotionStage := (sName := 'IM5L0:PPM:MMS');
 
     {attribute 'pytmc' := 'pv: AL1L0:REF:MMS'}
-    {attribute 'TcLinkTo' := .nRawEncoderULINT     := TIIB[AL1L0-EL5042-E2]^FB Inputs Channel 2^Position'}
+    {attribute 'TcLinkTo' := '.nRawEncoderULINT     := TIIB[AL1L0-EL5042-E2]^FB Inputs Channel 2^Position'}
     M58: ST_MotionStage := (sName := 'AL1L0:REF:MMS');
 END_VAR]]></Declaration>
   </GVL>

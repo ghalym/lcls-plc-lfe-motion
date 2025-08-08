@@ -8,11 +8,11 @@ VAR
         io: io
     '}
     {attribute 'TcLinkTo' := '.fbGige.iIlluminatorINT := TIIB[IM5L0-EL4004-E7]^AO Outputs Channel 1^Analog output;
-                              .fbPowerMeter.iVoltageINT := TIIB[IM5L0-EL3602-E6]^AI Standard Channel 1^Value;
-                              .fbPowerMeter.fbTempSensor.bError := TIIB[IM5L0-EL3200-0010-E5]^TC Inputs Channel 1^Status^Error;
-                              .fbPowerMeter.fbTempSensor.bUnderrange := TIIB[IM5L0-EL3200-0010-E5]^TC Inputs Channel 1^Status^Underrange;
-                              .fbPowerMeter.fbTempSensor.bOverrange := TIIB[IM5L0-EL3200-0010-E5]^TC Inputs Channel 1^Status^Overrange;
-                              .fbPowerMeter.fbTempSensor.iRaw := TIIB[IM5L0-EL3200-0010-E5]^TC Inputs Channel 1^Value'}
+                              .fbPowerMeter.iVoltageINT := TIIB[IM5L0-EL3602-E6]^AI Inputs Channel 1^Value;
+                              .fbPowerMeter.fbTempSensor.bError := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Status^Error;
+                              .fbPowerMeter.fbTempSensor.bUnderrange := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Status^Underrange;
+                              .fbPowerMeter.fbTempSensor.bOverrange := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Status^Overrange;
+                              .fbPowerMeter.fbTempSensor.iRaw := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Value'}
     fbIM5L0: FB_PPM;
 
     fbStateSetup: FB_StateSetupHelper;

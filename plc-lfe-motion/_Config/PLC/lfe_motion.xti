@@ -1316,7 +1316,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{5364CE42-9782-432E-9F8A-838503C1EFE8}" Name="lfe_motion" PrjFilePath="..\..\lfe_motion\lfe_motion.plcproj" TmcFilePath="..\..\lfe_motion\lfe_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{508BDCAD-044E-A799-EB7C-BFB71C20331D}" TmcPath="lfe_motion\lfe_motion.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{5D4A82EB-BC52-47C8-B35A-4ED7A183B3C9}" TmcPath="lfe_motion\lfe_motion.tmc">
 			<Name>lfe_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -10999,12 +10999,27 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iLaserINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iShutdownINT" VarB="AO Outputs Channel 2^Analog output" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^B950-100H2-L0S5-ECJ-01 (CU1128-B)^AL1L0-REF^AL1L0-EL5042-E2">
+				<Link VarA="PlcTask Inputs^Main.M58.nRawEncoderULINT" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^IM5L0-PPM^IM5L0-EL1084-E4">
 				<Link VarA="PlcTask Inputs^Main.M57.bLimitBackwardEnable" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M57.bLimitForwardEnable" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^IM5L0-PPM^IM5L0-EL2004-E3">
 				<Link VarA="PlcTask Outputs^Main.M57.bBrakeRelease" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^IM5L0-PPM^IM5L0-EL3202-0010-E5">
+				<Link VarA="PlcTask Inputs^PRG_IM5L0_PPM.fbIM5L0.fbPowerMeter.fbTempSensor.bError" VarB="RTD Inputs Channel 1^Status^Error" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_IM5L0_PPM.fbIM5L0.fbPowerMeter.fbTempSensor.bOverrange" VarB="RTD Inputs Channel 1^Status^Overrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_IM5L0_PPM.fbIM5L0.fbPowerMeter.fbTempSensor.bUnderrange" VarB="RTD Inputs Channel 1^Status^Underrange" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^PRG_IM5L0_PPM.fbIM5L0.fbPowerMeter.fbTempSensor.iRaw" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^IM5L0-PPM^IM5L0-EL3602-E6">
+				<Link VarA="PlcTask Inputs^PRG_IM5L0_PPM.fbIM5L0.fbPowerMeter.iVoltageINT" VarB="AI Inputs Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^IM5L0-PPM^IM5L0-EL4004-E7">
+				<Link VarA="PlcTask Outputs^PRG_IM5L0_PPM.fbIM5L0.fbGige.iIlluminatorINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^IM5L0-PPM^IM5L0-EL5042-E2">
 				<Link VarA="PlcTask Inputs^Main.M57.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>

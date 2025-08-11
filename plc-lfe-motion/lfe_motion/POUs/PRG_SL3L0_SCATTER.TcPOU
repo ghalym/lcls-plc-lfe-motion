@@ -10,7 +10,7 @@ VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
     fbSL3L0: FB_SLITS;
 
     {attribute 'pytmc' := '
-    pv: SL2L0:POWER:GO;
+    pv: SL3L0:SCATTER:GO;
     io: io;
     field: ZNAM False;
     field: ONAM True;

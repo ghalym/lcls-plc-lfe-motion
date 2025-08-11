@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="PRG_SL3L0_SCATTER" Id="{2f7c7ee8-bff7-0f63-16c3-0ffcdcf8ceed}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_SL3L0_SCATTER
+VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
+    {attribute 'pytmc' := '
+        pv: SL3L0:SCATTER
+        io: io
+    '}
+    fbSL3L0: FB_SLITS;
+
+    {attribute 'pytmc' := '
+    pv: SL2L0:POWER:GO;
+    io: io;
+    field: ZNAM False;
+    field: ONAM True;
+    '}
+    bExecuteMotion:BOOL ;
+
+    bMoveOk:BOOL :=TRUE;
+
+     (*Offsets*)
+    (* Absolute encoder value at the HLS + Absolute encoder value at the centered beam *)
+    rEncoderOffsetTop: REAL := 0;
+    rEncoderOffsetBottom: REAL := 0;
+    rEncoderOffsetNorth: REAL := 0;
+    rEncoderOffsetSouth: REAL := 0;
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+(*
+--MAPPING TO PHYSICAL TERMINAL--
+Main.M59     (Bottom)
+Main.M61     (South)
+Main.M60     (Top)
+Main.M62     (North)
+*)
+
+fbSL3L0.rEncoderOffsetTop := rEncoderOffsetTop;
+fbSL3L0.rEncoderOffsetBottom := rEncoderOffsetBottom;
+fbSL3L0.rEncoderOffsetNorth := rEncoderOffsetNorth;
+fbSL3L0.rEncoderOffsetSouth := rEncoderOffsetSouth;
+
+fbSL3L0.bMoveOk := bMoveOk;
+fbSL3L0(stTopBlade:=  Main.M60,
+        stBottomBlade:= Main.M59,
+        stNorthBlade:=  Main.M62,
+        stSouthBlade:=  Main.M61,
+        bExecuteMotion:=bExecuteMotion);
+]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

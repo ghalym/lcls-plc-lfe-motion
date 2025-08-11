@@ -30,6 +30,7 @@
 		<AxisFolder Name="EM3L0-IPM"/>
 		<AxisFolder Name="IM5L0-PPM"/>
 		<AxisFolder Name="AL1L0-REF"/>
+		<AxisFolder Name="SL3L0-SCATTER"/>
 		<Axis File="Axis 1.xti" Id="1"/>
 		<Axis File="Axis 2.xti" Id="2"/>
 		<Axis File="Axis 3.xti" Id="3"/>
@@ -88,5 +89,9 @@
 		<Axis File="EM3L0-Y-M56.xti" Id="56"/>
 		<Axis File="Axis 57 IM5L0-PPM-MMS.xti" Id="57"/>
 		<Axis File="AL1L0-REF-MMS-M58.xti" Id="58"/>
+		<Axis File="SL3L0-BOTTOM-M59.xti" Id="59"/>
+		<Axis File="SL3L0-TOP-M60.xti" Id="60"/>
+		<Axis File="SL3L0-SOUTH-M61.xti" Id="61"/>
+		<Axis File="SL3L0-NORTH-M62.xti" Id="62"/>
 	</NC>
 </TcSmItem>

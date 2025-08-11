@@ -97,6 +97,9 @@
     <Compile Include="POUs\PRG_SL2L0_POWER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_SL3L0_SCATTER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_SP1L0_KMONO.TcPOU">
       <SubType>Code</SubType>
     </Compile>

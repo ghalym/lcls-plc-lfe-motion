@@ -17,9 +17,16 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
+      <ST><![CDATA[// There are no end of travel limits installed on this device
+MAIN.M58.bLimitBackwardEnable := TRUE;
+MAIN.M58.bLimitForwardEnable := TRUE;
+
+
+fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
 fbStateSetup(stPositionState:=fbAL1L0.stOut, fPosition:=0, sPmpsState:='AL1L0:REF-OUT');
 fbStateSetup(stPositionState:=fbAL1L0.stIn, fPosition:=-43.38, fDelta:=2, sPmpsState:='AL1L0:REF-IN');
+
+
 
 fbAL1L0(
     fbFFHWO := GVL.fbFastFaultOutput1,

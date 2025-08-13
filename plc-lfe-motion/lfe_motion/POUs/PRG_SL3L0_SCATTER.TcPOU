@@ -7,7 +7,7 @@ VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
         pv: SL3L0:SCATTER
         io: io
     '}
-    fbSL3L0: FB_SLITS;
+    fbSL3L0: FB_SLITS_SCATTER;
 
     {attribute 'pytmc' := '
     pv: SL3L0:SCATTER:GO;
@@ -37,6 +37,11 @@ Main.M61     (South)
 Main.M60     (Top)
 Main.M62     (North)
 *)
+//Absolute enocders
+Main.M59.nHomingMode := ENUM_EpicsHomeCmd.NONE;
+Main.M60.nHomingMode := ENUM_EpicsHomeCmd.NONE;
+Main.M61.nHomingMode := ENUM_EpicsHomeCmd.NONE;
+Main.M62.nHomingMode := ENUM_EpicsHomeCmd.NONE;
 
 fbSL3L0.rEncoderOffsetTop := rEncoderOffsetTop;
 fbSL3L0.rEncoderOffsetBottom := rEncoderOffsetBottom;

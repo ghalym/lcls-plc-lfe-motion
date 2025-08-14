@@ -24,7 +24,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[//'fbIM5L0.fbPowerMeter.fbTempSensor.fResolution :=0.01;
+
 fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
 fbStateSetup(stPositionState:=fbIM5L0.stOut, fPosition:=-3.0004, 	sPmpsState:='IM5L0:PPM-OUT');
 fbStateSetup(stPositionState:=fbIM5L0.stPower, fPosition:=-43.3451, sPmpsState:='IM5L0:PPM-POWERMETER');

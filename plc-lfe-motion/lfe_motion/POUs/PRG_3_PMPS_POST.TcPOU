@@ -6,13 +6,32 @@ VAR
     fbArbiterIO: FB_SubSysToArbiter_IO;
     bMR1L1_Veto_OUT: BOOL;
     fbVetoArbiter_L1: FB_VetoArbiter;
+	//Fast Fault to Aggregate all Group 1 faults
+	g_FastFault		:	FB_FastFault;
+	g_FastFaultOutput2: INT;
+	q_xFastFaultOut: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[bMR1L1_Veto_OUT := PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.MR1L1_OUT] AND NOT PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.MR1L1_IN];
 
 GVL.fbFastFaultOutput1.Execute();
+GVL.fbFastFaultOutput1a.Execute();
 GVL.fbFastFaultOutput2.Execute(i_xVeto:=bMR1L1_Veto_OUT);
+
+// Aggregate FastFaultOutputs into a single FastFault
+g_FastFault(
+    io_fbFFHWO := GVL.fbFastFaultOutput1,
+    i_xOK := (  GVL.fbFastFaultOutput1a.q_xFastFaultOut
+                AND GVL.fbFastFaultOutput1b.q_xFastFaultOut
+				AND GVL.fbFastFaultOutput1c.q_xFastFaultOut
+				AND GVL.fbFastFaultOutput1d.q_xFastFaultOut
+             ),
+    i_xAutoReset:=TRUE
+);
+
+
+
 
 fbVetoArbiter_L1(bVeto:=bMR1L1_Veto_OUT,
                 HigherAuthority := GVL.fbArbiter,

@@ -34,7 +34,7 @@ fbStateSetup(stPositionState:=fbIM5L0.stYag2, fPosition:=-76.0395, 	sPmpsState:=
 
 fbIM5L0(
     fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbFFHWO := GVL.fbFastFaultOutput1d,
     stYStage := Main.M57,
     sDeviceName := 'IM5L0:PPM',
     sTransitionKey := 'IM5L0:PPM-TRANSITION',

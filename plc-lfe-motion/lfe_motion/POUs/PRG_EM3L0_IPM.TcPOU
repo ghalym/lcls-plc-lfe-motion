@@ -28,7 +28,7 @@ fbStateSetup(StPositionState:=fbEM3L0.stTarget4, fposition:=-79.85, sPmpsState :
 
 fbEM3L0(
     fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbFFHWO := GVL.fbFastFaultOutput1c,
     stXStage := MAIN.M55,
     stYStage := MAIN.M56,
     sDeviceName := 'EM3L0:IPM',

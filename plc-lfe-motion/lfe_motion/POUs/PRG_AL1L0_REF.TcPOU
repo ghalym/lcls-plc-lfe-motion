@@ -27,7 +27,7 @@ fbStateSetup(stPositionState:=fbAL1L0.stOut, fPosition:=0, sPmpsState:='AL1L0:RE
 fbStateSetup(stPositionState:=fbAL1L0.stIn, fPosition:=-43.38, fDelta:=2, sPmpsState:='AL1L0:REF-IN');
 
 fbAL1L0(
-    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbFFHWO := GVL.fbFastFaultOutput1d,
     fbArbiter := GVL.fbArbiter,
     stYStage := MAIN.M58,
     sDeviceName := 'AL1L0:REF',

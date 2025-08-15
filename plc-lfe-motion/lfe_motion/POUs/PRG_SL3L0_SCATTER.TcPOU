@@ -21,10 +21,10 @@ VAR // linking to rtd in the following order Bottom - South - TOP - NORTH
 
      (*Offsets*)
     (* Absolute encoder value at the HLS + Absolute encoder value at the centered beam *)
-    rEncoderOffsetTop: REAL := 0;
-    rEncoderOffsetBottom: REAL := 0;
-    rEncoderOffsetNorth: REAL := 0;
-    rEncoderOffsetSouth: REAL := 0;
+    rEncoderOffsetTop: REAL := 20;
+    rEncoderOffsetBottom: REAL := -20;
+    rEncoderOffsetNorth: REAL := 20;
+    rEncoderOffsetSouth: REAL := -20;
 
 END_VAR
 ]]></Declaration>

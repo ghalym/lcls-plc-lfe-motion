@@ -6,10 +6,10 @@ VAR
     fbArbiterIO: FB_SubSysToArbiter_IO;
     bMR1L1_Veto_OUT: BOOL;
     fbVetoArbiter_L1: FB_VetoArbiter;
-	//Fast Fault to Aggregate all Group 1 faults
-	g_FastFault		:	FB_FastFault();
-	g_FastFaultOutput2: INT;
-	q_xFastFaultOut: INT;
+    //Fast Fault to Aggregate all Group 1 faults
+    g_FastFault		:	FB_FastFault();
+    g_FastFaultOutput2: INT;
+    q_xFastFaultOut: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -27,11 +27,11 @@ g_FastFault(
     io_fbFFHWO := GVL.fbFastFaultOutput1,
     i_xOK := (  GVL.fbFastFaultOutput1a.q_xFastFaultOut
                 AND GVL.fbFastFaultOutput1b.q_xFastFaultOut
-				AND GVL.fbFastFaultOutput1c.q_xFastFaultOut
-				AND GVL.fbFastFaultOutput1d.q_xFastFaultOut
+                AND GVL.fbFastFaultOutput1c.q_xFastFaultOut
+                AND GVL.fbFastFaultOutput1d.q_xFastFaultOut
              ),
     i_xAutoReset:=TRUE,
-	i_DevName :='Aggregate LFE CC FastFaultOutputs'
+    i_DevName :='Aggregate LFE CC FastFaultOutputs'
 );
 
 

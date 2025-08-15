@@ -7,7 +7,7 @@ VAR
     bMR1L1_Veto_OUT: BOOL;
     fbVetoArbiter_L1: FB_VetoArbiter;
 	//Fast Fault to Aggregate all Group 1 faults
-	g_FastFault		:	FB_FastFault;
+	g_FastFault		:	FB_FastFault();
 	g_FastFaultOutput2: INT;
 	q_xFastFaultOut: INT;
 END_VAR
@@ -17,6 +17,9 @@ END_VAR
 
 GVL.fbFastFaultOutput1.Execute();
 GVL.fbFastFaultOutput1a.Execute();
+GVL.fbFastFaultOutput1b.Execute();
+GVL.fbFastFaultOutput1c.Execute();
+GVL.fbFastFaultOutput1d.Execute();
 GVL.fbFastFaultOutput2.Execute(i_xVeto:=bMR1L1_Veto_OUT);
 
 // Aggregate FastFaultOutputs into a single FastFault
@@ -27,7 +30,8 @@ g_FastFault(
 				AND GVL.fbFastFaultOutput1c.q_xFastFaultOut
 				AND GVL.fbFastFaultOutput1d.q_xFastFaultOut
              ),
-    i_xAutoReset:=TRUE
+    i_xAutoReset:=TRUE,
+	i_DevName :='Aggregate LFE CC FastFaultOutputs'
 );
 
 

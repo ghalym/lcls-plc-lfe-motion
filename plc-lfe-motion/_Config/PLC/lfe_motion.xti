@@ -1316,7 +1316,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{5364CE42-9782-432E-9F8A-838503C1EFE8}" Name="lfe_motion" PrjFilePath="..\..\lfe_motion\lfe_motion.plcproj" TmcFilePath="..\..\lfe_motion\lfe_motion.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{05FF53D7-6777-BB41-4D76-3D1020AE9EF7}" TmcPath="lfe_motion\lfe_motion.tmc">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{0D013565-3093-6E98-810B-E67B9F346390}" TmcPath="lfe_motion\lfe_motion.tmc">
 			<Name>lfe_motion Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="8" AreaNo="4">
@@ -11257,6 +11257,7 @@ External Setpoint Generation:
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^B950-100H2-L0S5-ECJ-01 (CU1128-B)^AL1L0-REF^AL1L0-EL4004-E4">
 				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iLaserINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iLaserINT" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iShutdownINT" VarB="AO Outputs Channel 2^Analog output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^B950-100H2-L0S5-ECJ-01 (CU1128-B)^AL1L0-REF^AL1L0-EL5042-E2">

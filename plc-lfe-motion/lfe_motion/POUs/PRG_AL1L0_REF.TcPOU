@@ -4,7 +4,7 @@
     <Declaration><![CDATA[PROGRAM PRG_AL1L0_REF
 VAR
     {attribute 'pytmc' := 'pv: AL1L0:REF'}
-    {attribute 'TcLinkTo' := '.fbLaser.iLaserINT := TIIB[AL1L0-EL4004-E4]^AO Outputs Channel 1^Analog output;
+    {attribute 'TcLinkTo' := '.fbLaser.iLaserINT := TIIB[AL1L0-EL4004-E4]^AO Outputs Channel 3^Analog output;
                               .fbLaser.iShutdownINT := TIIB[AL1L0-EL4004-E4]^AO Outputs Channel 2^Analog output'}
     fbAL1L0: FB_REF;
 
@@ -35,7 +35,9 @@ fbAL1L0(
     bEnableMotion := TRUE,
     bEnableBeamParams := TRUE,
     bEnablePositionLimits := TRUE,
-);]]></ST>
+);
+// Needed to prevent gravity from pulling the stage down since there is no brake
+MAIN.M58.nEnableMode := ENUM_StageEnableMode.ALWAYS;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -25,7 +25,7 @@ VAR
 
     {attribute 'pytmc' := '
         pv: AT2L0:XTES:MMS
-        expand: :%.2d:STATE
+        expand: :%.2d
     '}
     fbAT2L0_states: ARRAY[1..19] OF FB_PositionState1D_InOut;
 

@@ -11256,7 +11256,6 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^Main.M48.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 3  (EK1122)^X1 B950-100H2-L0S5-ECJ-01^B950-100H2-L0S5-ECJ-01 (CU1128-B)^AL1L0-REF^AL1L0-EL4004-E4">
-				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iLaserINT" VarB="AO Outputs Channel 1^Analog output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iLaserINT" VarB="AO Outputs Channel 3^Analog output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_AL1L0_REF.fbAL1L0.fbLaser.iShutdownINT" VarB="AO Outputs Channel 2^Analog output" AutoLink="true"/>
 			</OwnerB>

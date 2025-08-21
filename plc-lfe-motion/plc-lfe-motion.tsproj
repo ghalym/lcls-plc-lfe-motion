@@ -35,9 +35,6 @@
 		<Io>
 			<Device File="PLC Rail (EtherCAT).xti" Id="1"/>
 		</Io>
-		<SymbolWatch>
-			<Variable>TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X2 HXR EC2 (EK1100)^EC2 E2 (EK1122)^X2 ECJ (CU1128)^X2 EM3L0-IPM (EK1100)^EM3L0-EL5042-E2^FB Inputs Channel 2^Position</Variable>
-		</SymbolWatch>
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500841000403}" Id="#x02030030"/>

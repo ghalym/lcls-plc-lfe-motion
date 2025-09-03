@@ -90,7 +90,7 @@ fbStateSetup(stPositionState:=fbIM4L0.stReticle, fPosition:=-26.65, sPmpsState:=
 
 fbIM4L0(
     fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbFFHWO := GVL.fbFastFaultOutput1b,
     stYStage := Main.M28,
     stZoomStage := Main.M29,
     stFocusStage := Main.M30,

@@ -12,8 +12,15 @@ VAR_GLOBAL
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:01'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
     fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
-
     {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:02'}
+    fbFastFaultOutput1a: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
+    {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:03'}
+    fbFastFaultOutput1b: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
+    {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:04'}
+    fbFastFaultOutput1c: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
+    {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:05'}
+    fbFastFaultOutput1d: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
+    {attribute 'pytmc' := 'pv: PLC:LFE:MOTION:FFO:06'}
     {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 2^Output'}
     fbFastFaultOutput2: FB_HardwareFFOutput := (bAutoReset := TRUE, i_sNetID := '172.21.88.66.1.1');
 

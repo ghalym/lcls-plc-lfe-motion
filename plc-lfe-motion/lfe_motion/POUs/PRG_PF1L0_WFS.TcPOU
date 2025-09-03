@@ -39,7 +39,7 @@ fbStateSetup(stPositionState:=fbPF1L0.stTarget5, fPosition:=-36.277, sPmpsState:
 
 fbPF1L0(
     fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbFFHWO := GVL.fbFastFaultOutput1b,
     stYStage := Main.M31,
     stZStage := Main.M32,
     sDeviceName := 'PF1L0:WFS',

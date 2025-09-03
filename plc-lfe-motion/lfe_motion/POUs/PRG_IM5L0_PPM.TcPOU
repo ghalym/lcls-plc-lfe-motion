@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="PRG_IM5L0_PPM" Id="{61c22d69-cff8-0be6-1efc-2dd9fd0a11a8}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_IM5L0_PPM
+VAR
+    {attribute 'pytmc' := '
+        pv: IM5L0:PPM
+        io: io
+    '}
+    {attribute 'TcLinkTo' := '.fbGige.iIlluminatorINT := TIIB[IM5L0-EL4004-E7]^AO Outputs Channel 1^Analog output;
+                              .fbPowerMeter.iVoltageINT := TIIB[IM5L0-EL3602-E6]^AI Inputs Channel 1^Value;
+                              .fbPowerMeter.fbTempSensor.bError := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Status^Error;
+                              .fbPowerMeter.fbTempSensor.bUnderrange := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Status^Underrange;
+                              .fbPowerMeter.fbTempSensor.bOverrange := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Status^Overrange;
+                              .fbPowerMeter.fbTempSensor.iRaw := TIIB[IM5L0-EL3202-0010-E5]^RTD Inputs Channel 1^Value'}
+    fbIM5L0: FB_PPM;
+
+    fbStateSetup: FB_StateSetupHelper;
+    stDefault: ST_PositionState := (
+        fVelocity := 0.5,
+        bMoveOk := TRUE,
+        bValid := TRUE
+    );
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[//'fbIM5L0.fbPowerMeter.fbTempSensor.fResolution :=0.01;
+
+fbStateSetup(stPositionState:=stDefault, bSetDefault:=TRUE);
+fbStateSetup(stPositionState:=fbIM5L0.stOut, fPosition:=-3.0004, 	sPmpsState:='IM5L0:PPM-OUT');
+fbStateSetup(stPositionState:=fbIM5L0.stPower, fPosition:=-43.3451, sPmpsState:='IM5L0:PPM-POWERMETER');
+fbStateSetup(stPositionState:=fbIM5L0.stYag1, fPosition:=-65.39670,	sPmpsState:='IM5L0:PPM-YAG1');
+fbStateSetup(stPositionState:=fbIM5L0.stYag2, fPosition:=-76.0395, 	sPmpsState:='IM5L0:PPM-YAG2');
+
+fbIM5L0(
+    fbArbiter := GVL.fbArbiter,
+    fbFFHWO := GVL.fbFastFaultOutput1d,
+    stYStage := Main.M57,
+    sDeviceName := 'IM5L0:PPM',
+    sTransitionKey := 'IM5L0:PPM-TRANSITION',
+    bEnableMotion := TRUE,
+    bEnableBeamParams := TRUE,
+    bEnablePositionLimits := TRUE,
+    fResponsivity := 1.0,
+    iTermBits := 31,
+    fTermMax := 10000,
+    fTermMin := -10000
+);]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

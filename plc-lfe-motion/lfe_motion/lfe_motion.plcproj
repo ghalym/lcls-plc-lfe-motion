@@ -49,6 +49,12 @@
     <Compile Include="POUs\FB_AttenuatorElementDensity.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_AL1L0_REF.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_IM5L0_PPM.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_3_PMPS_POST.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +62,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_AT2L0_SOLID.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\PRG_EM3L0_IPM.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\PRG_IM1L0_XTES.TcPOU">
@@ -88,6 +97,9 @@
     <Compile Include="POUs\PRG_SL2L0_POWER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\PRG_SL3L0_SCATTER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\PRG_SP1L0_KMONO.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -116,6 +128,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Temp\FB_SLITS_POWER.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Temp\FB_SLITS_SCATTER.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Version\Global_Version.TcGVL">
@@ -151,9 +166,9 @@
       <DefaultResolution>PMPS, * (SLAC - LCLS)</DefaultResolution>
       <Namespace>PMPS</Namespace>
       <Parameters>
-        <Parameter ListName="PMPS_PARAM" xmlns="">
+        <Parameter ListName="PMPS_PARAM">
           <Key>MAX_FAST_FAULTS</Key>
-          <Value>100</Value>
+          <Value>30</Value>
         </Parameter>
       </Parameters>
     </PlaceholderReference>
@@ -189,7 +204,7 @@
       <Resolution>lcls-twincat-motion, 4.2.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="lcls-twincat-physics">
-      <Resolution>lcls-twincat-physics, * (SLAC)</Resolution>
+      <Resolution>lcls-twincat-physics, 0.0.0 (SLAC)</Resolution>
     </PlaceholderResolution>
     <PlaceholderResolution Include="PMPS">
       <Resolution>PMPS, 3.4.1 (SLAC - LCLS)</Resolution>

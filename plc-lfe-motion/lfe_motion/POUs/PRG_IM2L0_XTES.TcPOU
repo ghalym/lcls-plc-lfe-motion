@@ -86,7 +86,7 @@ Main.M24.bLimitForwardEnable := bDefectiveLimitSwitch OR (Main.M24.stAxisStatus.
 
 fbIM2L0(
     fbArbiter := GVL.fbArbiter,
-    fbFFHWO := GVL.fbFastFaultOutput1,
+    fbFFHWO := GVL.fbFastFaultOutput1a,
     stYStage := Main.M24,
     stZoomStage := Main.M25,
     stFocusStage := Main.M26,

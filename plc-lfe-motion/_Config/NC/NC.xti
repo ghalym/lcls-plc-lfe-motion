@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNcSafTaskDef" SubType="0">
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.17" ClassName="CNcSafTaskDef" SubType="0">
 	<NC>
-		<SafTask Priority="4" CycleTime="10000" AmsPort="501" IoAtBegin="true">
+		<SafTask Priority="4" CycleTime="10000" AmsPort="501" Affinity="#x00000002" IoAtBegin="true">
 			<Name>NC-Task 1 SAF</Name>
 			<Vars VarGrpType="1" InsertType="1">
 				<Name>Inputs</Name>
@@ -13,7 +13,7 @@
 				<Name>Image</Name>
 			</Image>
 		</SafTask>
-		<SvbTask Priority="8" CycleTime="100000" AmsPort="511">
+		<SvbTask Priority="8" CycleTime="100000" AmsPort="511" Affinity="#x00000002">
 			<Name>NC-Task 1 SVB</Name>
 		</SvbTask>
 		<AxisFolder Name="AT2L0-SOLID"/>
@@ -27,6 +27,10 @@
 		<AxisFolder Name="SL1L0-POWER"/>
 		<AxisFolder Name="SL2L0-POWER"/>
 		<AxisFolder Name="SP1L0-KMONO"/>
+		<AxisFolder Name="EM3L0-IPM"/>
+		<AxisFolder Name="IM5L0-PPM"/>
+		<AxisFolder Name="AL1L0-REF"/>
+		<AxisFolder Name="SL3L0-SCATTER"/>
 		<Axis File="Axis 1.xti" Id="1"/>
 		<Axis File="Axis 2.xti" Id="2"/>
 		<Axis File="Axis 3.xti" Id="3"/>
@@ -81,5 +85,13 @@
 		<Axis File="RETICLE VERT Y.xti" Id="52"/>
 		<Axis File="DIODE HORIZ X.xti" Id="53"/>
 		<Axis File="DIODE VERT Y.xti" Id="54"/>
+		<Axis File="EM3L0-X-M55.xti" Id="55"/>
+		<Axis File="EM3L0-Y-M56.xti" Id="56"/>
+		<Axis File="Axis 57 IM5L0-PPM-MMS.xti" Id="57"/>
+		<Axis File="AL1L0-REF-MMS-M58.xti" Id="58"/>
+		<Axis File="SL3L0-BOTTOM-M59.xti" Id="59"/>
+		<Axis File="SL3L0-TOP-M60.xti" Id="60"/>
+		<Axis File="SL3L0-SOUTH-M61.xti" Id="61"/>
+		<Axis File="SL3L0-NORTH-M62.xti" Id="62"/>
 	</NC>
 </TcSmItem>
